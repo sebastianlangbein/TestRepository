@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class TransformMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public float speed = 5f;
     void Update()
     {
-        
+        transform.position += Vector3.forward * speed;
+
     }
 }

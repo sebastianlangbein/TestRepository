@@ -237,10 +237,10 @@ MonoBehaviour:
   charName: Jeremy
   dialogue:
   - Hello
-  - 
-  - 
-  - 
-  - 
+  - cool fact
+  - other cool fact
+  - more cool fact
+  - bye
 --- !u!1001 &191660038
 PrefabInstance:
   m_ObjectHideFlags: 0

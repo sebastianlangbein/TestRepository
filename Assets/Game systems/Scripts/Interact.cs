@@ -17,12 +17,17 @@ public class Interact : MonoBehaviour
             //create hit info
             RaycastHit _hitInfo;
             //if this physics raycast hits something within 10 units
-            if (Physics.Raycast(_interact,out _hitInfo,10))
+            if (Physics.Raycast(_interact,out _hitInfo,3))
             {
                 #region NPC tag
                 //and that hits info is tagged NPC
                 if (_hitInfo.collider.CompareTag("NPC"))
                 {
+                    if (_hitInfo.collider.GetComponent<DialogueParent>())
+                    {
+                        _hitInfo.collider.GetComponent<DialogueParent>().showDialogue = true;
+                        GameManager.GameManagerInstance.currentState = GameStates.MenuState;
+                    }
                     //Debug that we hit a NPC     
                     Debug.Log("NPC");
                 }     

@@ -417,7 +417,7 @@ MonoBehaviour:
   - how is it hanging and so on
   - wanna hang bro?
   - hahah cool thanx bro
-  - haha cya l8r
+  - haha cya later bro
   neutralText:
   - hello
   - how are you?
@@ -429,7 +429,7 @@ MonoBehaviour:
   - ...
   - say yes if you are cool
   - THIS LINE SHOULDNT RUN
-  - fuck you bitch stupid ass fucking clown ass bitch
+  - grrrr...
 --- !u!136 &213835379
 CapsuleCollider:
   m_ObjectHideFlags: 0

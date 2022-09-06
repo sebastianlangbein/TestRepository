@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuHandler : MonoBehaviour
 {
@@ -13,9 +13,12 @@ public class MenuHandler : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.anyKey && menuState==MenuStates.AnyKey)
+        if (menuState == MenuStates.AnyKey)
         {
-            ChangeMenu(1);
+            if (Input.anyKey)
+            {
+                ChangeMenu(1);
+            }
         }
     }
     public void ChangeMenu(int state)
@@ -26,6 +29,17 @@ public class MenuHandler : MonoBehaviour
         }
         panels[state].SetActive(true);
         menuState = (MenuStates)state;
+    }
+    public void ChangeScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }
 public enum MenuStates

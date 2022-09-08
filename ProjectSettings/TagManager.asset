@@ -8,6 +8,7 @@ TagManager:
   - Item
   - NPC
   - Chest
+  - SFX
   layers:
   - Default
   - TransparentFX

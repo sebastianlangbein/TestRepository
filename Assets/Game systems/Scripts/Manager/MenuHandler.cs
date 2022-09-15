@@ -46,6 +46,7 @@ public enum MenuStates
 {
     AnyKey,
     MainMenu,
-    Options
+    Options,
+    KeyBinds
 }
 

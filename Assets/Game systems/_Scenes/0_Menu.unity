@@ -3209,7 +3209,7 @@ MonoBehaviour:
   inputKeys:
   - inputName: Forward
     labelName: {fileID: 2044309449}
-    keyDisplay: {fileID: 0}
+    keyDisplay: {fileID: 1582927998}
     keyDisplayValue: 
     keyDefaultValue: W
   - inputName: Backward
@@ -3254,6 +3254,12 @@ MonoBehaviour:
     keyDefaultValue: Tab
   keyPrefab: {fileID: 2044309447}
   keyContainer: {fileID: 1567624499}
+  changedColour:
+    serializedVersion: 2
+    rgba: 4294552359
+  selectedColour:
+    serializedVersion: 2
+    rgba: 4280579311
 --- !u!1 &743767194
 GameObject:
   m_ObjectHideFlags: 0
@@ -4515,7 +4521,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1183889379}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 733831501}
+        m_TargetAssemblyTypeName: KeyBindManager, Assembly-CSharp
+        m_MethodName: ChangeKey
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1183889376}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1183889379
 MonoBehaviour:
   m_ObjectHideFlags: 0

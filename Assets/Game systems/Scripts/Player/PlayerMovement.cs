@@ -21,15 +21,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (GameManager.GameManagerInstance.currentState == GameStates.GameState)
         {
-            //moveDir = new Vector3(Input.GetAxis("Horizontal"), moveDir.y, Input.GetAxis("Vertical"));
-            //moveDir = transform.TransformDirection(moveDir);
-            //moveDir.x *= speed;
-            //moveDir.z *= speed;
+            moveDir = new Vector3(Input.GetAxis("Horizontal"), moveDir.y, Input.GetAxis("Vertical"));
+            moveDir = transform.TransformDirection(moveDir);
+            moveDir.x *= speed;
+            moveDir.z *= speed;
             if (_charC.isGrounded)
             {
-                moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-                moveDir = transform.TransformDirection(moveDir);
-                moveDir *= speed;
+                //moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                //moveDir = transform.TransformDirection(moveDir);
+                //moveDir *= speed;
                 if (Input.GetButton("Jump"))
                 {
                     moveDir.y = jumpSpeed;
